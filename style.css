@@ -1,0 +1,144 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body{
+    width: 100vw;
+    color: white;
+    background:linear-gradient(90deg, #020202, #221E1F);
+    font-size: min(4vw, 3em);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav{
+    position: fixed;
+    top:0;
+    width: 100%;
+    background:linear-gradient(#161515, #363030);
+    z-index:999;
+}
+
+nav>ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 1em;
+    z-index: 9999;
+}
+
+section{
+    position: relative;
+}
+
+section:first-of-type,
+section:last-of-type{
+    height: 100vh;
+}
+article{
+    margin-top: 5em;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:1em;
+    text-align: center;
+}
+
+#welcome-section > img{
+    width: 50%;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 2em;
+}
+h2{
+    width: 100%;
+    background-color: #363030;
+    padding: 1em;
+    text-align: center;
+}
+
+article > p{
+    width: 31ch;
+}
+
+.projects-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.projects-container> div{
+    width:max-content;
+    margin: 1em 0;
+    text-align: center;
+}
+img{
+    width: 90%;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 10px;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links{
+    width: max-content;
+}
+
+.social-links>*{
+    margin: 0 1em;;
+    scale: 2;
+}
+
+.social > *{
+    margin: 3em 0;
+}
+
+a.nav-control{
+    position: absolute;
+    top: -60px;
+}
+
+@media screen and (min-width:45em){
+    
+    nav>ul{
+        justify-content: flex-end;
+        gap: 2em;
+        padding: 0.5em;
+    }
+
+    #welcome-section{
+        flex-direction: row;
+    }
+
+    img{
+        max-width: min(40vw, 600px);
+    }
+
+    .projects-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .social-links > *{
+        margin: 1em 2em;
+        scale:3;
+    }
+}
